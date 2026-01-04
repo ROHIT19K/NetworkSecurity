@@ -1,0 +1,25 @@
+[ 2026-01-04 11:48:28,540 ] 21 root - INFO -Initiate the Data Ingestion
+[ 2026-01-04 11:48:34,975 ] 67 root - INFO -Performed Train Test Split On the Dataframe
+[ 2026-01-04 11:48:34,976 ] 68 root - INFO -Exited Split_Data_as_Train_Test Method of the Data_Ingestion Class
+[ 2026-01-04 11:48:34,978 ] 74 root - INFO -Exporting Train and Test File Path
+[ 2026-01-04 11:48:35,100 ] 84 root - INFO -Exported Train and Test File Path.
+[ 2026-01-04 11:48:35,101 ] 23 root - INFO -Data Initiation Completed
+[ 2026-01-04 11:48:35,115 ] 29 root - INFO -Initiate the Data Validation
+[ 2026-01-04 11:48:35,256 ] 37 root - INFO -Required Number of columns:2
+[ 2026-01-04 11:48:35,257 ] 38 root - INFO -Data Frame has Columns:31
+[ 2026-01-04 11:48:35,257 ] 37 root - INFO -Required Number of columns:2
+[ 2026-01-04 11:48:35,258 ] 38 root - INFO -Data Frame has Columns:31
+[ 2026-01-04 11:48:35,600 ] 31 root - INFO -Data Validation Completed
+[ 2026-01-04 11:48:35,601 ] 37 root - INFO -Initiate the Data Transformation
+[ 2026-01-04 11:48:35,602 ] 58 root - INFO -Entered initiate Data Transformation Method of DataTransformation Class
+[ 2026-01-04 11:48:35,602 ] 60 root - INFO -Starting Data Transformation
+[ 2026-01-04 11:48:35,694 ] 43 root - INFO -Entered the Data Transformation object method of Transformation class
+[ 2026-01-04 11:48:35,694 ] 48 root - INFO -Initialse KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2026-01-04 11:48:35,730 ] 54 root - INFO -Entered The save_object method of mainuTILS cLASS
+[ 2026-01-04 11:48:35,738 ] 58 root - INFO -Exited the save_object method of MainUtils Class
+[ 2026-01-04 11:48:35,742 ] 39 root - INFO -Data Transformation Completed
+[ 2026-01-04 11:48:35,743 ] 45 root - INFO -Initiate the Model Trainer
+[ 2026-01-04 11:54:16,388 ] 54 root - INFO -Entered The save_object method of mainuTILS cLASS
+[ 2026-01-04 11:54:16,389 ] 58 root - INFO -Exited the save_object method of MainUtils Class
+[ 2026-01-04 11:54:16,389 ] 117 root - INFO -Model Trainer Artifact: ModelTrainerArtifact(trained_model_file_path='Artifacts\\01_04_2026_11_48_25\\model_trainer\\trained_model\\model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.990978205778003, precision_score=0.9874747474747475, recall_score=0.9945066124109868), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.97708082026538, precision_score=0.9759036144578314, recall_score=0.9782608695652174))
+[ 2026-01-04 11:54:16,390 ] 47 root - INFO -Model Trainer Completed or Created
