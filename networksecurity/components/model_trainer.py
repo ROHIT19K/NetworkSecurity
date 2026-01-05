@@ -25,6 +25,8 @@ from sklearn.ensemble import (
     RandomForestClassifier,
 )
 
+import dagshub
+dagshub.init(repo_owner='ROHIT19K', repo_name='NetworkSecurity', mlflow=True)
 
 class ModelTrainer:
     def __init__(self, model_trainer_config:ModelTrainerConfig, data_transformation_artifact:DataTransformationArtifact):
@@ -45,6 +47,7 @@ class ModelTrainer:
             mlflow.log_metric("recall_score", recall_score)
                 
             mlflow.sklearn.log_model(best_model, name="model")
+            # mlflow.log_artifact(self.data_transformation_artifact.transformed_object_file_path)
 
     def train_model(self, X_train, y_train, x_test, y_test):
 
@@ -108,6 +111,8 @@ class ModelTrainer:
 
         Network_Model = NetworkModel(preprocessor=preprocessor, model=best_model)
         save_object(self.model_trainer_config.trained_model_file_path, obj=NetworkModel)
+
+        save_object("final_model/model.pkl",best_model)
 
         ## Model Trainer Artifact
         model_trainer_artifact = ModelTrainerArtifact(trained_model_file_path=self.model_trainer_config.trained_model_file_path,
